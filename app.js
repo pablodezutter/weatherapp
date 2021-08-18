@@ -1,15 +1,18 @@
-window.addEventListener('Load', () => {
+window.addEventListener("load", () => {
     let long;
     let lat;
 
-    if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(position =>{
-            console.log(postition);
+if (navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(position =>{
+        long = position.coords.longitude;
+        lat = position.coords.latitude;
+        console.log(position);
 
-        }
+        const api = ´https://api.darsky.net´
 
-    } else {
-       h1.textContent = 'Hey, this is not working cauz you have no gps' 
-    }
+    });
+}
+    fetch()
 
-})
+
+});
